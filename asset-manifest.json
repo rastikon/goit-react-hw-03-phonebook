@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/rastikon/goit-react-hw-03-phonebook/static/css/main.f4256831.css",
+    "main.js": "/rastikon/goit-react-hw-03-phonebook/static/js/main.fc1f773a.js",
+    "index.html": "/rastikon/goit-react-hw-03-phonebook/index.html",
+    "main.f4256831.css.map": "/rastikon/goit-react-hw-03-phonebook/static/css/main.f4256831.css.map",
+    "main.fc1f773a.js.map": "/rastikon/goit-react-hw-03-phonebook/static/js/main.fc1f773a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4256831.css",
+    "static/js/main.fc1f773a.js"
+  ]
+}
