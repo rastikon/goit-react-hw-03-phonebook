@@ -1,12 +1,11 @@
-import { Component } from 'react';
-import { nanoid } from 'nanoid';
-import 'components/Form/Form.css';
-import 'components/App/App.css';
+import { Component } from "react";
+import "components/Form/Form.css";
+import "components/App/App.css";
 
 class Form extends Component {
   state = {
-    name: '',
-    number: '',
+    name: "",
+    number: "",
   };
 
   // Внесення змін у форму
@@ -16,35 +15,15 @@ class Form extends Component {
   };
 
   //Сабміт форми
-  handleFormSubmit = e => {
+  handleFormSubmit = (e) => {
     e.preventDefault();
-    const contact = {
-      id: nanoid(),
-      name: this.state.name,
-      number: this.state.number,
-    };
-    // const { name, number } = this.state;
-    const { onAdd } = this.props;
-    const isValidateForm = this.validateForm();
-
-    if (!isValidateForm) return;
-    onAdd(contact);
+    this.props.onAdd(this.state);
     this.resetForm();
-  };
-  // Перевіряє на валідність введені дані
-  validateForm = () => {
-    const { name, number } = this.state;
-    const { onCheckUnique } = this.props;
-    if (!name || !number) {
-      alert('Some field is empty');
-      return false;
-    }
-    return onCheckUnique(name);
   };
 
   // Метод очистки форми
   resetForm = () => {
-    this.setState({ name: '', number: '' });
+    this.setState({ name: "", number: "" });
   };
 
   render() {
